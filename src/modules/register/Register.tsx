@@ -17,7 +17,7 @@ const Register = () => {
   const [isAuthLoading, setAuthLoading] = useState(false);
   const [isGoogleAuthLoading, setGoogleAuthLoading] = useState(false);
   const [isFacebookAuthLoading, setFacebookAuthLoading] = useState(false);
-  const [t] = useTranslation();
+  const { t } = useTranslation();
   const dispatch = useAppDispatch();
 
   const navigate = useNavigate();

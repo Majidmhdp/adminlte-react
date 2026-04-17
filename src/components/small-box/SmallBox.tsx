@@ -24,7 +24,7 @@ const SmallBox = ({
   navigateTo,
   loading,
 }: SmallBoxProps) => {
-  const [t] = useTranslation();
+  const { t } = useTranslation();
 
   const iconContent = useMemo(() => {
     const iconVariant = icon?.variant || variant;

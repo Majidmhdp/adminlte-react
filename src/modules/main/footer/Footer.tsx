@@ -9,7 +9,7 @@ const Footer = ({
   style?: any;
   containered?: boolean;
 }) => {
-  const [t] = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <footer className="main-footer" style={{ ...style }}>

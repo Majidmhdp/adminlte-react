@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { NotificationMenu } from '@app/styles/dropdown-menus';
 
 const NotificationsDropdown = () => {
-  const [t] = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <NotificationMenu hideArrow>

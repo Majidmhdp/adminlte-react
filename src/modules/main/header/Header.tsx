@@ -27,7 +27,7 @@ const StyledBrandImage = styled(Image)`
 `;
 
 const Header = ({ containered, ...rest }: { containered?: boolean } & any) => {
-  const [t] = useTranslation();
+  const { t } = useTranslation();
   const dispatch = useAppDispatch();
   const navbarVariant = useAppSelector((state) => state.ui.navbarVariant);
   const headerBorder = useAppSelector((state) => state.ui.headerBorder);

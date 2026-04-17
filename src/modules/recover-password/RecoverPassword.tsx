@@ -8,7 +8,7 @@ import { Form, InputGroup } from 'react-bootstrap';
 import { Button } from '@app/styles/common';
 
 const RecoverPassword = () => {
-  const [t] = useTranslation();
+  const { t } = useTranslation();
 
   const { handleChange, values, handleSubmit, touched, errors } = useFormik({
     initialValues: {

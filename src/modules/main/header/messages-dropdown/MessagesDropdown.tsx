@@ -4,7 +4,7 @@ import { Image } from '@profabric/react-components';
 import { MessagesMenu } from '@app/styles/dropdown-menus';
 
 const MessagesDropdown = () => {
-  const [t] = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <MessagesMenu hideArrow>

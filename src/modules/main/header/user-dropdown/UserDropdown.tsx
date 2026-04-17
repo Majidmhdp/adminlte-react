@@ -15,7 +15,7 @@ import { DateTime } from 'luxon';
 
 const UserDropdown = () => {
   const navigate = useNavigate();
-  const [t] = useTranslation();
+  const { t } = useTranslation();
   const currentUser = useAppSelector((state) => state.auth.currentUser);
   const [dropdownOpen, setDropdownOpen] = useState(false);
 

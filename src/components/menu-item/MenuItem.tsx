@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { IMenuItem } from '@app/modules/main/menu-sidebar/MenuSidebar';
 
 const MenuItem = ({ menuItem }: { menuItem: IMenuItem }) => {
-  const [t] = useTranslation();
+  const { t } = useTranslation();
   const [isMenuExtended, setIsMenuExtended] = useState(false);
   const [isExpandable, setIsExpandable] = useState(false);
   const [isMainActive, setIsMainActive] = useState(false);

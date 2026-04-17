@@ -8,7 +8,7 @@ import { Form, InputGroup } from 'react-bootstrap';
 import { Button } from '@profabric/react-components';
 
 const ForgotPassword = () => {
-  const [t] = useTranslation();
+  const { t } = useTranslation();
 
   const { handleChange, values, handleSubmit, touched, errors } = useFormik({
     initialValues: {
