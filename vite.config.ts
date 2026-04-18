@@ -14,10 +14,13 @@ export default ({ mode }) => {
     plugins: [react()],
     resolve: {
       alias: {
-        '@app': path.resolve(__dirname, './src'),
-        '@store': path.resolve(__dirname, './src/store'),
-        '@components': path.resolve(__dirname, './src/components'),
-        '@modules': path.resolve(__dirname, './src/modules'),
+        '@root': path.resolve(__dirname, './src'),
+        '@app': path.resolve(__dirname, './src/app'),
+        '@store': path.resolve(__dirname, './src/app/store'),
+        '@features': path.resolve(__dirname, './src/features'),
+        '@routes': path.resolve(__dirname, './src/app/routes'),
+        '@shared': path.resolve(__dirname, './src/shared'),
+        '@entities': path.resolve(__dirname, './src/entities'),
         '@pages': path.resolve(__dirname, './src/pages'),
       },
     },

@@ -1,11 +1,15 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
 @import url('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.3.0/css/flag-icon.min.css');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700');
 
+@import 'shared/styles/scss/adminlte.scss';
+
 @import 'react-toastify/dist/ReactToastify.min.css';
 
-@import './scss/adminlte.scss';
+
 
 #root {
   width: 100vw;

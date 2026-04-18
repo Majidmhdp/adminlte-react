@@ -1,4 +1,4 @@
-import { ContentHeader } from '@components';
+import { ContentHeader } from '@shared/ui/components';
 
 const Blank = () => {
   return (

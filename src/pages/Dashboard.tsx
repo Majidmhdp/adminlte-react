@@ -1,5 +1,5 @@
-import { InfoBox } from '@app/components/info-box/InfoBox';
-import { ContentHeader, SmallBox } from '@components';
+import { InfoBox } from '@shared/ui/components/info-box/InfoBox';
+import { ContentHeader, SmallBox } from '@shared/ui/components';
 import {
   faBookmark,
   faEnvelope,

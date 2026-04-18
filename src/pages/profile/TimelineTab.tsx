@@ -1,4 +1,4 @@
-import {} from '@app/index';
+import {} from '@root/index';
 import { Image } from '@profabric/react-components';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';

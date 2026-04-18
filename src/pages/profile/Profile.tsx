@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ContentHeader } from '@components';
+import { ContentHeader } from '@shared/ui/components';
 import { Image, Button as RawButton } from '@profabric/react-components';
 import styled from 'styled-components';
 import ActivityTab from './ActivityTab';
 import TimelineTab from './TimelineTab';
 import SettingsTab from './SettingsTab';
-import { Button } from '@app/styles/common';
-import { useAppSelector } from '@app/store/store';
+import { Button } from '@shared/styles/common';
+import { useAppSelector } from '@store/store';
 
 const StyledUserImage = styled(Image)`
   --pf-border: 3px solid #adb5bd;

@@ -2,21 +2,27 @@
   "compilerOptions": {
     "esModuleInterop": true,
     "paths": {
-      "@app/*": [
+      "@root/*": [
         "src/*"
       ],
+      "@app/*": [
+        "src/app/*"
+      ],
       "@store/*": [
-        "src/store/*"
+        "src/app/store/*"
       ],
-      "@store": [
-        "src/store/"
+       "@features/*": [
+        "src/features/*"
       ],
-      "@components": [
-        "src/components/index"
+      "@routes/*": [
+        "src/app/routes/*"
       ],
-      "@modules/*": [
-        "src/modules/*"
+      "@shared/*": [
+        "src/shared/*"
       ],
+      "@entities/*": [
+        "src/entities/*"
+      ], 
       "@pages/*": [
         "src/pages/*"
       ]

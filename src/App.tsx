@@ -1,28 +1,28 @@
 import { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
-import Main from '@modules/main/Main';
-import Login from '@modules/login/Login';
-import Register from '@modules/register/Register';
-import ForgetPassword from '@modules/forgot-password/ForgotPassword';
-import RecoverPassword from '@modules/recover-password/RecoverPassword';
-import { useWindowSize } from '@app/hooks/useWindowSize';
-import { calculateWindowSize } from '@app/utils/helpers';
-import { setWindowSize } from '@app/store/reducers/ui';
+import Main from '@pages/main/Main';
+import Login from '@pages/login/Login';
+import Register from '@pages/register/Register';
+import ForgetPassword from '@pages/forgot-password/ForgotPassword';
+import RecoverPassword from '@pages/recover-password/RecoverPassword';
+import { useWindowSize } from '@shared/hooks/useWindowSize';
+import { calculateWindowSize } from '@shared/lib/utils/helpers';
+import { setWindowSize } from '@store/reducers/ui';
 
 import Dashboard from '@pages/Dashboard';
 import Blank from '@pages/Blank';
 import SubMenu from '@pages/SubMenu';
 import Profile from '@pages/profile/Profile';
 
-import PublicRoute from './routes/PublicRoute';
-import PrivateRoute from './routes/PrivateRoute';
-import { setCurrentUser } from './store/reducers/auth';
+import PublicRoute from '@routes/PublicRoute';
+import PrivateRoute from '@routes/PrivateRoute';
+import { setCurrentUser } from '@store/reducers/auth';
 
-import { firebaseAuth } from './firebase';
+import { firebaseAuth } from './shared/lib/firebase';
 import { onAuthStateChanged } from 'firebase/auth';
-import { useAppDispatch, useAppSelector } from './store/store';
-import { Loading } from './components/Loading';
+import { useAppDispatch, useAppSelector } from '@store/store';
+import { Loading } from '@shared/ui/components/Loading';
 
 const App = () => {
   const windowSize = useWindowSize();
