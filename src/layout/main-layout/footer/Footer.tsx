@@ -25,11 +25,11 @@ const Footer = ({
         <strong>
           <span>Copyright © {DateTime.now().toFormat('y')} </span>
           <a
-            href="https://erdkse.com"
+            href={`${import.meta.env.VITE_APP_COPYRIGHT_LINK || 'https://adminlte.io'}`}
             target="_blank"
             rel="noopener noreferrer"
           >
-            erdkse.com
+            {import.meta.env.VITE_APP_AUTHOR || 'Admin LTE React Template'}
           </a>
           <span>.</span>
         </strong>

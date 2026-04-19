@@ -5,10 +5,10 @@ import {
   toggleControlSidebar,
   toggleSidebarMenu,
 } from '@store/reducers/ui';
-import MessagesDropdown from '@pages/main/header/messages-dropdown/MessagesDropdown';
-import NotificationsDropdown from '@pages/main/header/notifications-dropdown/NotificationsDropdown';
-import LanguagesDropdown from '@pages/main/header/languages-dropdown/LanguagesDropdown';
-import UserDropdown from '@pages/main/header/user-dropdown/UserDropdown';
+import MessagesDropdown from '@root/layout/main-layout/header/messages-dropdown/MessagesDropdown';
+import NotificationsDropdown from '@root/layout/main-layout/header/notifications-dropdown/NotificationsDropdown';
+import LanguagesDropdown from '@root/layout/main-layout/header/languages-dropdown/LanguagesDropdown';
+import UserDropdown from '@root/layout/main-layout/header/user-dropdown/UserDropdown';
 import { styled } from 'styled-components';
 import { Image } from '@profabric/react-components';
 import { useAppDispatch, useAppSelector } from '@store/store';

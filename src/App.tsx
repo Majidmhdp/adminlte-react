@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
-import Main from '@pages/main/Main';
+import Main from '@root/layout/main-layout/Main';
 import Login from '@pages/login/Login';
 import Register from '@pages/register/Register';
 import ForgetPassword from '@pages/forgot-password/ForgotPassword';
@@ -10,9 +10,9 @@ import { useWindowSize } from '@shared/hooks/useWindowSize';
 import { calculateWindowSize } from '@shared/lib/utils/helpers';
 import { setWindowSize } from '@store/reducers/ui';
 
-import Dashboard from '@pages/Dashboard';
-import Blank from '@pages/Blank';
-import SubMenu from '@pages/SubMenu';
+import Dashboard from '@root/layout/main-layout/Dashboard';
+import Blank from '@root/layout/main-layout/Blank';
+import SubMenu from '@root/layout/main-layout/SubMenu';
 import Profile from '@pages/profile/Profile';
 
 import PublicRoute from '@routes/PublicRoute';

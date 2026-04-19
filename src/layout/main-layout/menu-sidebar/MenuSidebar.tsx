@@ -3,7 +3,7 @@ import { MenuItem } from '@shared/ui/components';
 import { Image } from '@profabric/react-components';
 import styled from 'styled-components';
 import { SidebarSearch } from '@shared/ui/components/sidebar-search/SidebarSearch';
-import i18n from '@shared/lib/utils/i18n';
+import i18n from '@root/app/providers/i18n';
 import { useAppSelector } from '@store/store';
 
 export interface IMenuItem {

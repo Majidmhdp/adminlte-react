@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import { NavLink, useNavigate, useLocation, Location } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { IMenuItem } from '@pages/main/menu-sidebar/MenuSidebar';
+import { IMenuItem } from '@root/layout/main-layout/menu-sidebar/MenuSidebar';
 
 const MenuItem = ({ menuItem }: { menuItem: IMenuItem }) => {
   const { t } = useTranslation();

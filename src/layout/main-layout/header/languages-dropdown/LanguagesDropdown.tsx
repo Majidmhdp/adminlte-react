@@ -2,39 +2,7 @@ import { StyledDropdown } from '@shared/styles/common';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-export interface Language {
-  key: string;
-  icon: string;
-  label: string;
-}
-
-const languages: Language[] = [
-  {
-    key: 'en',
-    icon: 'flag-icon-us',
-    label: 'header.language.english',
-  },
-  {
-    key: 'tr',
-    icon: 'flag-icon-tr',
-    label: 'header.language.turkish',
-  },
-  {
-    key: 'de',
-    icon: 'flag-icon-de',
-    label: 'header.language.german',
-  },
-  {
-    key: 'fr',
-    icon: 'flag-icon-fr',
-    label: 'header.language.french',
-  },
-  {
-    key: 'es',
-    icon: 'flag-icon-es',
-    label: 'header.language.spanish',
-  },
-];
+import { Language, languages } from '@root/shared/config/i18n/Configurations';
 
 const LanguagesDropdown = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);

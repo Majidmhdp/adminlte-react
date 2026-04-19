@@ -1,5 +1,36 @@
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
+export interface Language {
+  key: string;
+  icon: string;
+  label: string;
+}
+
+export const languages: Language[] = [
+  {
+    key: 'en',
+    icon: 'flag-icon-us',
+    label: 'header.language.english',
+  },
+  {
+    key: 'tr',
+    icon: 'flag-icon-tr',
+    label: 'header.language.turkish',
+  },
+  {
+    key: 'de',
+    icon: 'flag-icon-de',
+    label: 'header.language.german',
+  },
+  {
+    key: 'fr',
+    icon: 'flag-icon-fr',
+    label: 'header.language.french',
+  },
+  {
+    key: 'es',
+    icon: 'flag-icon-es',
+    label: 'header.language.spanish',
+  },
+];
 
 import translationEN from '@shared/config/i18n/locales/en/translation.json';
 import translationTR from '@shared/config/i18n/locales/tr/translation.json';
@@ -8,7 +39,7 @@ import translationES from '@shared/config/i18n/locales/es/translation.json';
 import translationFR from '@shared/config/i18n/locales/fr/translation.json';
 
 // the translations
-const resources = {
+export const languageResources = {
   en: {
     translation: translationEN,
   },
@@ -25,18 +56,3 @@ const resources = {
     translation: translationDE,
   },
 };
-
-i18n
-  .use(initReactI18next as any) // passes i18n down to react-i18next
-  .init({
-    resources,
-    lng: 'en',
-    interpolation: {
-      escapeValue: false, // react already safes from xss
-    },
-    react: {
-      wait: true,
-    },
-  } as any);
-
-export default i18n;

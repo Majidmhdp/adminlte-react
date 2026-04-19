@@ -5,9 +5,9 @@ import {
   removeWindowClass,
   scrollbarVisible,
 } from '@shared/lib/utils/helpers';
-import ControlSidebar from '@pages/main/control-sidebar/ControlSidebar';
-import Header from '@pages/main/header/Header';
-import Footer from '@pages/main/footer/Footer';
+import ControlSidebar from '@root/layout/main-layout/control-sidebar/ControlSidebar';
+import Header from '@root/layout/main-layout/header/Header';
+import Footer from '@root/layout/main-layout/footer/Footer';
 import { useAppDispatch, useAppSelector } from '@store/store';
 import MenuSidebar from './menu-sidebar/MenuSidebar';
 import { styled } from 'styled-components';
