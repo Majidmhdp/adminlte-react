@@ -34,7 +34,7 @@ const Main = () => {
   const topNavigation = useAppSelector((state) => state.ui.topNavigation);
 
   const screenSize = useAppSelector((state) => state.ui.screenSize);
-  const currentUser = useAppSelector((state) => state.auth.currentUser);
+  const currentUser = useAppSelector((state) => state.user.currentUser);
   const [isAppLoaded, setIsAppLoaded] = useState(false);
   const [isScrollbarVisible, setIsScrollbarVisible] = useState(false);
   const mainRef = useRef<HTMLDivElement | undefined>();

@@ -2,20 +2,20 @@ import { IUser } from '@entities/user/types';
 // import { User } from '@firebase/auth';
 import { createSlice } from '@reduxjs/toolkit';
 
-export interface AuthState {
+export interface UserState {
   currentUser: IUser | null;
 }
 
-const initialState: AuthState = {
+const initialState: UserState = {
   currentUser: null,
 };
 
-export const authSlice = createSlice({
-  name: 'auth',
+export const userSlice = createSlice({
+  name: 'user',
   initialState,
   reducers: {
     setCurrentUser: (
-      state: AuthState,
+      state: UserState,
       { payload }: { payload: IUser | null }
     ) => {
       state.currentUser = payload;
@@ -23,6 +23,6 @@ export const authSlice = createSlice({
   },
 });
 
-export const { setCurrentUser } = authSlice.actions;
+export const { setCurrentUser } = userSlice.actions;
 
-export default authSlice.reducer;
+export default userSlice.reducer;

@@ -22,7 +22,7 @@ export const TabButton = styled(RawButton)`
 const Profile = () => {
   const [activeTab, setActiveTab] = useState('ACTIVITY');
   const { t } = useTranslation();
-  const currentUser = useAppSelector((state) => state.auth.currentUser);
+  const currentUser = useAppSelector((state) => state.user.currentUser);
 
   const toggle = (tab: string) => {
     if (activeTab !== tab) setActiveTab(tab);

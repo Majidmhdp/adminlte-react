@@ -1,13 +1,13 @@
 import { Action, ThunkAction, configureStore } from '@reduxjs/toolkit';
 
-import { authSlice } from '@store/reducers/auth';
+import { userSlice } from '@root/app/store/reducers/user';
 import { uiSlice } from '@store/reducers/ui';
 import { createLogger } from 'redux-logger';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 
 const store = configureStore({
   reducer: {
-    auth: authSlice.reducer,
+    user: userSlice.reducer,
     ui: uiSlice.reducer,
   },
   middleware: (getDefaultMiddleware) =>

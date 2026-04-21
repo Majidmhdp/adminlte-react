@@ -5,4 +5,6 @@ export const mapFirebaseUser = (user: User): IUser => ({
   id: user.uid,
   email: user.email,
   name: user.displayName ?? undefined,
+  token: null,
+  isLoggedIn: false,
 });

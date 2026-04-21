@@ -8,9 +8,9 @@ import { setWindowClass } from '@shared/lib/utils/helpers';
 import { Form, InputGroup } from 'react-bootstrap';
 import { Checkbox } from '@profabric/react-components';
 
-import { setCurrentUser } from '@store/reducers/auth';
+import { setCurrentUser } from '@root/app/store/reducers/user';
 import { Button } from '@shared/styles/common';
-import { registerWithEmail, signInByGoogle } from '@shared/lib/auth';
+import { registerWithEmail, signInByGoogle } from '@root/shared/lib/useAuth';
 import { useAppDispatch } from '@store/store';
 
 const Register = () => {

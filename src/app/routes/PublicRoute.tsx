@@ -2,7 +2,7 @@ import { useAppSelector } from '@store/store';
 import { Navigate, Outlet } from 'react-router-dom';
 
 const PublicRoute = () => {
-  const isLoggedIn = useAppSelector((state) => state.auth.currentUser);
+  const isLoggedIn = useAppSelector((state) => state.user.currentUser);
   return isLoggedIn ? <Navigate to={`/`} /> : <Outlet />;
 };
 

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import Main from '@root/layout/main-layout/Main';
@@ -17,38 +17,16 @@ import Profile from '@pages/profile/Profile';
 
 import PublicRoute from '@routes/PublicRoute';
 import PrivateRoute from '@routes/PrivateRoute';
-import { setCurrentUser } from '@store/reducers/auth';
 
-import { firebaseAuth } from './shared/lib/firebase';
-import { onAuthStateChanged } from 'firebase/auth';
 import { useAppDispatch, useAppSelector } from '@store/store';
-import { Loading } from '@shared/ui/components/Loading';
+import { useAuth } from './shared/hooks/useAuth';
 
 const App = () => {
   const windowSize = useWindowSize();
   const screenSize = useAppSelector((state) => state.ui.screenSize);
   const dispatch = useAppDispatch();
 
-  const [isAppLoading, setIsAppLoading] = useState(true);
-
-  useEffect(() => {
-    onAuthStateChanged(
-      firebaseAuth,
-      (user) => {
-        if (user) {
-          dispatch(setCurrentUser(user));
-        } else {
-          dispatch(setCurrentUser(null));
-        }
-        setIsAppLoading(false);
-      },
-      (e) => {
-        console.log(e);
-        dispatch(setCurrentUser(null));
-        setIsAppLoading(false);
-      }
-    );
-  }, []);
+  const { tokenExpirationDate } = useAuth();
 
   useEffect(() => {
     const size = calculateWindowSize(windowSize.width);
@@ -56,10 +34,6 @@ const App = () => {
       dispatch(setWindowSize(size));
     }
   }, [windowSize]);
-
-  if (isAppLoading) {
-    return <Loading />;
-  }
 
   return (
     <>
